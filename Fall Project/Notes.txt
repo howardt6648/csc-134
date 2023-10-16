@@ -1,0 +1,31 @@
+Of course! Adding more rooms to your text-based haunted house game is relatively straightforward. Here's a simplified explanation of how to do it:
+
+1. **Create Functions for Each Room**: To add more rooms, you should create a new function for each room. These functions will represent the unique interactions and choices for that specific room. For example, if you want to add a "Kitchen" room, you can create a `kitchen()` function.
+
+2. **Call Room Functions**: In your main game loop, call the room functions as needed based on the player's choices. For example, if the player chooses to enter the house and goes to the kitchen, call the `kitchen()` function.
+
+3. **Room-Specific Choices**: Each room function should present the player with room-specific choices and actions. For the "Kitchen," you might present options like "1. Open the fridge" or "2. Search for a knife."
+
+Here's a simplified example of how to add a "Kitchen" room:
+
+```cpp
+// Function to represent the Kitchen room
+void kitchen() {
+    cout << "You enter a dark and dusty kitchen. The air smells musty." << endl;
+    cout << "What do you want to do in the kitchen?" << endl;
+    cout << "1. Open the fridge" << endl;
+    cout << "2. Search for a knife" << endl;
+    cout << "3. Go back to the entrance" << endl;
+}
+
+// Add a case for the "Kitchen" in your main game loop
+case 4:
+    kitchen();  // Call the kitchen function
+    cout << "Enter your choice (1-3): ";
+    cin >> choice;
+    // Handle player choices in the kitchen function
+    // For example, if (choice == 1) { /* Handle opening the fridge */ }
+    break;
+```
+
+Simply repeat this process for any additional rooms you want to add, creating a function for each and calling them as appropriate within your game loop. This modular approach makes it easy to extend your haunted house game with new rooms and interactions.
